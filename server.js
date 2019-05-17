@@ -1,8 +1,9 @@
 const express = require('express'),
+    cors = require('cors'),
     path = require('path'),
     PORT = process.env.PORT || 8080,
     app = express();
-
+app.use(cors);
 app.use(express.static(__dirname));
 
 app.get('*', (req, res) => {
