@@ -6,8 +6,21 @@ import GoogleMap from '../components/GoogleMap';
 class WeatherList extends Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            entry: 1,
+        };
     }
+
+    /*     trigg() {
+        this.setState({ entry: 2 });
+    } */
+
     renderCity(cityData) {
+        /*         if (cityData === undefined) {
+            return trigg();
+        } */
+
         const name = cityData.city.name;
         const temps = cityData.list.map(weather => {
             return weather.main.temp;
@@ -41,18 +54,25 @@ class WeatherList extends Component {
     }
     render() {
         const { weather } = this.props;
+
+        /*         if (this.state.entry === 2) {
+            return <h1>Opps...</h1>;
+        } */
+
         return (
-            <table className="table table-hover">
-                <thead>
-                    <tr>
-                        <th>City</th>
-                        <th>Temperature (K)</th>
-                        <th>Pressure (kPa)</th>
-                        <th>Humidity (%)</th>
-                    </tr>
-                </thead>
-                <tbody>{weather.map(this.renderCity)}</tbody>
-            </table>
+            <div style={{ overflowX: 'auto' }}>
+                <table className="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>City</th>
+                            <th>Temperature (K)</th>
+                            <th>Pressure (kPa)</th>
+                            <th>Humidity (%)</th>
+                        </tr>
+                    </thead>
+                    <tbody>{weather.map(this.renderCity)}</tbody>
+                </table>
+            </div>
         );
     }
 }
