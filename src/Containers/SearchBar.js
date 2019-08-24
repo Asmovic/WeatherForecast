@@ -29,7 +29,7 @@ class SearchBar extends Component {
                 className="input-group">
                 <input
                     type="text"
-                    placeholder="Pls enter name of any U.S city here..."
+                    placeholder="Pls enter name of any Nigeria city here..."
                     value={this.state.term}
                     onChange={this.onInputChange.bind(this)}
                     className="form-control"
