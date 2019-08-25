@@ -1,6 +1,6 @@
 import axios from 'axios';
-/* const API_KEY = 'ffb2f0b85301c8b7c7039a40843cc5c7'; */
-const API_KEY = "8fecdddd262f91a026ccee6d22c1827b";
+const API_KEY = 'ffb2f0b85301c8b7c7039a40843cc5c7';
+/* const API_KEY = "8fecdddd262f91a026ccee6d22c1827b"; */
 
 export const FETCH_WEATHER = 'FETCH_WEATHER';
 
