@@ -35,6 +35,11 @@ class WeatherList extends Component {
         });
 
         const { lon, lat } = cityData.city.coord;
+
+        console.log('temperature', temps);
+        console.log('pressures', pressures)
+        const mdt = [67, 89, 90, 76, 55]
+        console.log(mdt)
         return (
             <tr key={name}>
                 <td>
@@ -49,11 +54,15 @@ class WeatherList extends Component {
                 <td>
                     <Chart data={humidities} color="green" units="%" />
                 </td>
+
             </tr>
         );
     }
+
+    
     render() {
         const { weather } = this.props;
+        console.log('response', weather);
 
         /*         if (this.state.entry === 2) {
             return <h1>Opps...</h1>;
