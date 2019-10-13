@@ -22,5 +22,6 @@ const styles = {
         marginTop: 15,
         fontWeight: 'bold'
 
+        
     }
 }
